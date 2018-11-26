@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Конторка</title>      
+    </head>
+    <body>
+        <div class="content">
+
+            <div class="company">
+                <div class="company_budget" style="position: absolute; margin-left: 10px;">
+                    <label for="company-budget" class="company_budget__label"> Company budget</label>
+                    <input id="company-budget" 
+                           type="number" 
+                           class="company_budget__input" 
+                           placeholder="Enter company start budget"
+                           value="100000">
+                </div>
+    
+                <div class="toggle">
+                    <button id="btn_start" class="toggle-button"
+                     style="position: absolute; margin-left: 300px;
+                    ">Start</button>
+                    <button id="btn_stop" class="stop-button"
+                    style="position: absolute; margin-left: 350px;
+                   ">Stop</button>
+                </div>
+    
+                <div class="stop-reason"></div>
+            </div>
+
+            <div id="timer" class="turn" style=" position: absolute; margin-top: 40px;">Таймер</div>>
+
+            <div class="budget" style=" position: absolute; margin-top: 50px;">
+                Бюджет равен:
+                <div id="budget_value" class="budget-value"></div>
+            </div>
+
+            <div class="game">
+                <div class="game-log"></div>
+    
+                <div class="game-projects" style="position: absolute; margin-top: 100px;">
+                    <div class="game-projects--form">
+                        <div class="game-projects--form_name">
+                            <label for="project-name">Project name</label>
+                            <input id="project-name"
+                                   class="game-project--form_name__input"
+                                   placeholder="Enter project name"
+                                   value="Новый проект">
+                        </div>
+                        <p>
+                        <div class="game-project--form_cost">
+                            <label for="project-cost">Project cost</label>
+                            <input id="project-cost"
+                                   type="number"
+                                   class="game-project--form_cost__input"
+                                   placeholder="Enter project cost"
+                                   value="300">
+                        </div>
+                        <p>
+                        <div class="game-project--form_lines">
+                            <label for="project-lines">Project requires lines</label>
+                            <input id="project-lines"
+                                   class="game-project--form_lines__input"
+                                   placeholder="Enter project lines"
+                                   value="3000">
+                        </div>
+                        <p>
+                        <button id="btn_add_project" class="game-project--form_add">
+                            Add project
+                        </button>
+                        <hr/>
+                    </div>
+                    <div id="projects_list" class="game-projects--list"></div>
+                </div>
+    
+                <div class="game-managers"style="position: absolute; margin-top: 100px; margin-left: 340px">
+                    <div class="game-managers--form">
+                        <div class="game-managers--form_name">
+                            <label for="manager-name">Manager name</label>
+                            <input id="manager-name"
+                                   class="game-managers--form_name__input"
+                                   placeholder="Enter manager name"
+                                   value="Новый менеджер">
+                        </div>
+                        <p>
+                        <div class="game-managers--form_level">
+                            <label for="manager-exp">Manager experience</label>
+                            <input id="manager-exp"
+                                   class="game-managers--form_experience__input"
+                                   placeholder="Enter managers experience"
+                                   value="2">
+                        </div>
+                        <p></p>
+                        <button id="btn_add_manager" class="game-managers--form_add">
+                            Add Manager
+                        </button>
+                        <hr/>
+                    </div>
+                    <div class="game-managers--lists">
+                        <div id="free_managers" class="game-managers__free"></div>
+                        <div class="game-managers__busy"></div>
+                    </div>
+                </div>
+    
+                <div class="game-developers" style="position: absolute; margin-top: 100px; margin-left: 680px">
+                    <div class="game-developers--form">
+                        <div class="game-developers--form_name">
+                            <label for="developer-name">Developer name</label>
+                            <input id="developer-name" type="text"
+                                   class="game-developers--form_name__input"
+                                   placeholder="Enter developer name"
+                                   value="Новый разработчик">
+                        </div>
+                        <p></p>
+                        <div class="game-developers--form_level">
+                            <label for="dev-level">Developer level</label>
+                         <input id="id1-dev-level" name="dev-level" type="radio" value="Junior" checked> Junior
+                         <input id="id2-dev-level" name="dev-level" type="radio" value="Middle"> Middle
+                         <input id="id2-dev-level" name="dev-level" type="radio" value="Senior"> Senior
+                        </div>
+                        <p></p>
+                        <button id="btn_add_dev" class="game-developers--form_add">
+                            Add Developer 
+                        </button>
+                        <hr/>
+                    </div>
+                    <div class="game-developers--lists">
+                        <div id="free_devs" class="game-developers__free"></div>
+                        <div class="game-developers__busy"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="scripts/kasha.js"></script>
+    </body>
+</html>
